@@ -1,0 +1,46 @@
+
+<head>
+  <title>MommyDates</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet" >
+    <link href= url("/assets/images/sparkles.jpg") rel="stylesheet" >
+    <link href= url("/assets/images/martini.png") rel="stylesheet" >
+</head>
+
+  <div class="sign-background">
+    <h1> Sign Up  </h1>
+        <form action="users.php" method="post" accept-charset="">
+          <div class="initial-signup-form columns large-4 small-10">
+            <br>
+            Username:
+            <input type="text" name="username">
+            <br>
+            First Name:
+            <input type="text" name="first-name">
+            <br>
+            Last Name:
+            <input type="text" name="last-name">
+            <br>
+            Email:
+            <input type="email" name="email">
+            Password:
+            <input type="password" name="psw">
+            <br>
+            Zip Code:
+            <input type="numbers" name="zipcode">
+            <br>
+            Phone:
+            <input type="tel" name="usrtel">
+            <br>
+            About Me:
+            <textarea name="about-me" rows="10" cols="30">
+          </textarea>
+            <br>
+          <input type="submit" value="GET STARTED!">
+            <br>
+          </div>
+        </form>
+      </body>
+    </div>

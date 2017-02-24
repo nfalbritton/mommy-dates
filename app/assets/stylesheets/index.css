@@ -1,0 +1,71 @@
+
+  .form {
+    font-family: "Sansita", sans-serif;
+    color: #ff0066;
+    float: right;
+    display: grid;
+    width: 800px;
+    border: 3px solid #ff0066;
+
+  }
+
+  .top-bar {
+    background-color: #ff0066;
+    opacity: 0.5;
+
+  }
+
+  h1 {
+
+    color: #ff0066;
+    padding-top: 150px;
+    font-size: 500%;
+    text-align: left;
+
+  }
+
+  h3 {
+
+    font-size: 300%;
+    float: right;
+  }
+
+  body {
+
+    background-image: url("sparkles.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: "Questrial", sans-serif;
+    image: url("martini.png");
+
+  }
+
+  .sign-background {
+
+    background-image: url("sparkles.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 150%;
+
+  }
+
+
+
+  input[type=submit] {
+
+    background-color: #ff0066;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+  }
+
+  input[type=text] {
+
+    margin: auto;
+
+  }

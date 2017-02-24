@@ -1,0 +1,18 @@
+<div class="row container">
+  <div class="events columns large-6 small-12">
+    <div>
+      <div id="EventList">
+      <h3> Events </h3>
+
+      <ul>
+        <% if !@events.empty %>
+          <% @events.each do %>
+            <li><%= link_to "{event.name}", "/events/#{event.id}" %></li>
+            <% end %>
+          <% else %>
+          <li> "Sorry, no events match your search" </li>
+        <% end %>
+      </ul>
+
+    </div>
+  </div>

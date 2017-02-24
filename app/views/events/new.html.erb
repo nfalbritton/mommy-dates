@@ -1,0 +1,32 @@
+  <head>
+    <title>MommyDates</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  
+  </head>
+
+  <div class="event-form columns large-6 small-12">
+    <form action="/events/#{event.id}" method="post">
+      <h3> Create An Event </h3>
+      <label>Name of Event</label>
+      <input name="event[name]" type="text">
+
+      <label>Location</label>
+      <input name="event[location]" type="text">
+
+      <label>Zip Code</label>
+      <input name="number" type="text">
+
+      <label>Description</label>
+      <select name="event_description" id="event_description">
+      <input name="event[description]" type="text">
+
+      <label>Type of Event</label>
+      <input type="radio" name="event_type" value="night_out"> Night Out
+      <input type="radio" name="event_type" value="outdoor_activity"> Outdoor Activity
+      <input type="radio" name="event_type" value="workout_buddy"> Workout Buddy
+      <input type="radio" name="event_type" value="play_date"> Play Date
+
+      <input type="submit">
+    </form>
