@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  before_action :authenticate_user!, except: [:index]
 
   def index
   end
@@ -14,12 +14,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+
     if @user.save
       flash[:notice]= "User added successfully"
       redirect_to @user
     else
-      flash[:notice]= @user.errors.full_messages.to_sentence
-      render :new
+      render :index
     end
   end
 
@@ -38,16 +38,16 @@ class UsersController < ApplicationController
     @user = USER.find(params[:id])
   end
 
-  def user_params
-    params.require(:user).permit(
-    :username,
-    :first_name,
-    :last_name,
-    :email,
-    :zipcode,
-    :phone,
-    :avatar_url,
-    :about_me
-    )
-  end
+  # def user_params
+  #   params.require(:user).permit(
+  #   :username,
+  #   :first_name,
+  #   :last_name,
+  #   :email,
+  #   :zipcode,
+  #   :phone,
+  #   :avatar_url,
+  #   :about_me
+  #   )
+  # end
 end

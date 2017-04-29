@@ -1,26 +1,47 @@
-
-  .form {
-    font-family: "Sansita", sans-serif;
+  .nav-container {
+    font-size: 25px;
     color: #ff0066;
+
+  }
+
+  .search-container {
+    white-space: nowrap;
+    position: relative;
+    vertical-align: middle;
+    border: none;
+    font-size: 10pt;
+    border-radius: 5px;
+    padding: 20px 10px;
+    display: inline-block;
     float: right;
-    display: grid;
-    width: 800px;
-    border: 3px solid #ff0066;
 
   }
 
-  .top-bar {
-    background-color: #ff0066;
-    opacity: 0.5;
+  #user-email {
+    font-size: 20px;
 
   }
 
-  h1 {
+  .breaks {
+    padding-bottom: 30px;
+
+  }
+
+  .style_image {
+    width: 10%;
+    height: 10%;
+    display: block;
+    float: right;
+    margin-top: 15%;
+
+  }
+
+  h2 {
 
     color: #ff0066;
-    padding-top: 150px;
-    font-size: 500%;
-    text-align: left;
+    padding: 20%;
+    font-size: 80pt;
+    text-align: center;
 
   }
 
@@ -52,7 +73,6 @@
     font-size: 150%;
 
   }
-
 
 
   input[type=submit] {

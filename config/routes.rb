@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     resources :searches, only: [:index]
 
     resources :events, only: [:index, :show, :create, :edit, :update, :destroy] do
-      resources :users, only: [:index, :show, ]
+      resources :users, only: [:index, :show ]
     end
   end
