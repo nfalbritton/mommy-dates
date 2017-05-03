@@ -13,7 +13,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
 
     if @user.save
       flash[:notice]= "User added successfully"
@@ -23,6 +22,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    params[:user][:event_ids]=[]
+    @user = User.find(current_user)
+
+    if @user.update_attributes params[:user]
+      flash[:notice] = 'Settings have been saved'
+      redirect_to edit_user_url(@user)
+    else
+      flash.now[:error] = @user.errors
+      setup_form_values
+      respond_to do |format|
+        format.html { render :action => :edit }
+      end
+    end
+
   def destroy
     @user = User.find(params[:id])
     if current_user?
@@ -30,6 +44,11 @@ class UsersController < ApplicationController
       redirect_to '/user'
     end
   end
+
+  def user_interest?(event)
+    @user.event.include?
+  end
+end 
 
 
   private
