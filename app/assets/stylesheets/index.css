@@ -1,28 +1,4 @@
 
-.nav-container {
-  font-size: 25px;
-  color: #ff0066;
-
-}
-
-.search-container {
-  white-space: nowrap;
-  position: relative;
-  vertical-align: middle;
-  border: none;
-  font-size: 10pt;
-  border-radius: 5px;
-  padding: 20px 10px;
-  display: inline-block;
-  float: right;
-
-}
-
-#user-email {
-  font-size: 20px;
-
-}
-
 .breaks {
   padding-bottom: 30px;
 
@@ -52,18 +28,6 @@ h3 {
   float: right;
 }
 
-body {
-
-  background-image: url("sparkles.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  padding-left: 50px;
-  padding-right: 50px;
-  font-family: "Questrial", sans-serif;
-  image: url("martini.png");
-
-}
 
 .sign-background {
 

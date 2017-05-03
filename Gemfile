@@ -6,6 +6,7 @@ gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'devise'
+gem 'carrierwave'
 
 group :development do
   gem 'foundation-rails'
