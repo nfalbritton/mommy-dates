@@ -2,7 +2,6 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    @event = Event.new
   end
 
   def show
@@ -11,8 +10,8 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
     @user = current_user
+    @event = Event.new
   end
 
   def create
@@ -50,7 +49,7 @@ class EventsController < ApplicationController
       flash[:notice] = "You don't have permission to delete this event"
       redirect_to @event
     end
-  end
+end
 
   private
 

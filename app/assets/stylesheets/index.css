@@ -1,71 +1,92 @@
 
-  .form {
-    font-family: "Sansita", sans-serif;
-    color: #ff0066;
-    float: right;
-    display: grid;
-    width: 800px;
-    border: 3px solid #ff0066;
+.nav-container {
+  font-size: 25px;
+  color: #ff0066;
 
-  }
+}
 
-  .top-bar {
-    background-color: #ff0066;
-    opacity: 0.5;
+.search-container {
+  white-space: nowrap;
+  position: relative;
+  vertical-align: middle;
+  border: none;
+  font-size: 10pt;
+  border-radius: 5px;
+  padding: 20px 10px;
+  display: inline-block;
+  float: right;
 
-  }
+}
 
-  h1 {
+#user-email {
+  font-size: 20px;
 
-    color: #ff0066;
-    padding-top: 150px;
-    font-size: 500%;
-    text-align: left;
+}
 
-  }
+.breaks {
+  padding-bottom: 30px;
 
-  h3 {
+}
 
-    font-size: 300%;
-    float: right;
-  }
+.style_image {
+  width: 10%;
+  height: 10%;
+  display: block;
+  float: right;
+  margin-top: 15%;
 
-  body {
+}
 
-    background-image: url("sparkles.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-family: "Questrial", sans-serif;
-    image: url("martini.png");
+h2 {
 
-  }
+  color: #ff0066;
+  padding: 20%;
+  font-size: 80pt;
+  text-align: center;
 
-  .sign-background {
+}
 
-    background-image: url("sparkles.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    font-size: 150%;
+h3 {
 
-  }
+  font-size: 300%;
+  float: right;
+}
+
+body {
+
+  background-image: url("sparkles.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: "Questrial", sans-serif;
+  image: url("martini.png");
+
+}
+
+.sign-background {
+
+  background-image: url("sparkles.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 150%;
+
+}
 
 
+input[type=submit] {
 
-  input[type=submit] {
+  background-color: #ff0066;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 2px;
+}
 
-    background-color: #ff0066;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    margin: 4px 2px;
-  }
+input[type=text] {
 
-  input[type=text] {
+  margin: auto;
 
-    margin: auto;
-
-  }
+}

@@ -1,19 +1,12 @@
+
 <div class="row container" id="edit-page">
   <div class="columns large-4 small-12" id="edit-form">
-    </br>
+    <br/>
     <h3><%= @user.first_name %> <%= @user.last_name %></h3>
-    <ul>
     <li>Username: <%= @user.username %></li>
     <li>E-mail: <%= @user.email %></li>
     <li>Phone: <%= @user.phone %></li>
     <li>Zipcode: <%= @user.zipcode %></li>
     <li>About Me: <%= @user.about_me %></li>
-  </ul>
+    <li>Looking For: <%= @user_interest? %></li>
     <br/>
-
-  <div class="columns large-4 small-12" id="edit-form">
-  </br>
-  </br>
-    <p class="image"><%= image_tag @user.avatar %></p>
-  </div>
-</div>

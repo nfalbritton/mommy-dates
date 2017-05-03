@@ -6,15 +6,19 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
       <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet" >
-      <link href= url("/assets/images/sparkles.jpg") rel="stylesheet">
-      <link href=url("/assets/images/martini.png") rel="stylesheet">
   </head>
+  <body>
 
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <div class="nav">
-        <p class="active"><a href="/events"></a></p>
-      </div>
+    <div id="user-email">
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.username %></strong>
+          <%= link_to "View Profile", user_path(current_user), :class => 'navbar-link' %> |
+          <%= link_to "Edit Profile", edit_user_registration_path, :class => 'navbar-link' %> |
+
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+      <% end %>
     </div>
 
   <div class="top-bar-right">
@@ -32,13 +36,12 @@
   </div>
 </div>
 
-  <body>
-    <div class="main-page">
-      <div class="image"</div>
-        <br>
-        <br>
-        <br>
-      <h1> MOMMY DATES </h1>
-      <br>  <h3> "...Because the dating never stops "
+  <div class="main-page">
+    <%= image_tag("martini.png", alt: "martini", class: "style_image") %>
+    <div class="breaks"</div>
+      <h2> MOMMY DATES </h2>
+      <br>
+      <h3> "...Because the dating never stops" </h3>
     </div>
   </body>
+</html>

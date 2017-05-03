@@ -6,7 +6,6 @@
   <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet" >
     <link href= url("/assets/images/sparkles.jpg") rel="stylesheet" >
-    <link href= url("/assets/images/martini.png") rel="stylesheet" >
 </head>
 
   <div class="sign-background">
@@ -38,6 +37,12 @@
             <textarea name="about-me" rows="10" cols="30">
           </textarea>
             <br>
+          <ul> class="checkbox-list"
+            <label for="events">Looking For:</label>
+            <% ['Night Out', 'Outdoor Activity', 'Workout Buddy', 'Play Date'].each do |event| %>
+              <li><%= check_box_tag 'user[event_id][]', event.id, user_interest?(event) %></li>
+            <% end %>
+          </ul>
           <input type="submit" value="GET STARTED!">
             <br>
           </div>
