@@ -1,48 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MommyDates</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-      <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet" >
+  <head> </head>
   <body>
-
-  <div class="nav-container">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.username %></strong>
-        <%= link_to "View Profile", user_path(current_user), :class => 'navbar-link' %> |
-        <%= link_to "Edit Profile", edit_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
-    <% else %>
-      <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
-    <% end %>
-  </div>
-
-  <div class="search-container">
-    <form id="search-form" action="/searches" accept-charset="UTF-8" method="get">
-    <input type="search" name="search" id="search-field" placeholder="Search">
-      <div id="user-email">
-        <%= link_to "Username or Email", :class => 'navbar-link' %> |
-        <%= link_to "Password", :class => 'navbar-link' %> |
-        <%= link_to "Login", :class => 'navbar-link'  %>
-      </div>
-    </form>
-  </div>
-
   <div class="main-page">
     <%= image_tag("martini.png", alt: "martini", class: "style_image") %>
     <div class="breaks"</div>
       <h2> MOMMY DATES </h2>
-      <br>
       <h3> "...Because the dating never stops" </h3>
-
-  <div class="main-container">
-    <%= image_tag("martini.png", alt: "martini", class: "style_image") %>
-    <div class="breaks">
-      <h2> MOMMY DATES </h2>
-      <br>
-      <h3> "...Because the dating never stops </h3>
-    </div>
   </div>
-
+  </body>

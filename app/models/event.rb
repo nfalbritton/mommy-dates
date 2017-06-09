@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  has_many :matches 
+  has_many :matches
   has_many :users, through: :matches
 
   validates :night_out, presence: true
