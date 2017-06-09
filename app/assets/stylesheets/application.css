@@ -12,4 +12,32 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+ body {
+   font-family: "Questrial", sans-serif;
+   background-image: url("/assets/sparkles.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   font-size: 150%;
+  }
+
+  .top-bar-right {
+    padding-right: 10px;
+  }
+
+  #search {
+    width: auto;
+  }
+
+
+  #error_explanation li {
+    color: red;
+  }
+
+  #error_explanation {
+    color: red;
+  }

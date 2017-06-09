@@ -27,30 +27,3 @@ h3 {
   font-size: 300%;
   float: right;
 }
-
-
-.sign-background {
-
-  background-image: url("sparkles.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  font-size: 150%;
-
-}
-
-
-input[type=submit] {
-
-  background-color: #ff0066;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  margin: 4px 2px;
-}
-
-input[type=text] {
-
-  margin: auto;
-
-}
