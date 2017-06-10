@@ -4,11 +4,10 @@ Rails.application.routes.draw do
 
     root "users#index"
 
-    resources :users, only: [:index, :show, :create, :edit, :new, :destroy]
+    resources :users, only: [:index, :show, :create, :edit, :new, :destroy] do
+      resources :events, only: [:index, :show, :create, :edit, :update, :destroy]
 
     resources :searches, only: [:index]
 
-    resources :events, only: [:index, :show, :create, :edit, :update, :destroy] do
-      resources :users, only: [:index, :show ]
     end
   end

@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'foundation-rails'
-gem 'font-awesome-sass'
+
 
 group :development do
   gem 'foundation-rails'

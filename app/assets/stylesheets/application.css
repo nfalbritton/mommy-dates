@@ -17,7 +17,7 @@
  */
 
  body {
-   font-family: "Questrial", sans-serif;
+   font-family: Arial, "Questrial", sans-serif;
    background-image: url("/assets/sparkles.jpg");
    background-repeat: no-repeat;
    background-attachment: fixed;
@@ -40,4 +40,11 @@
 
   #error_explanation {
     color: red;
+  }
+
+  .sign_up_form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
   }

@@ -4,38 +4,27 @@ class UsersController < ApplicationController
   def index
   end
 
-  def show
-    @user = current_user
-  end
-
   def new
     @user = User.new
   end
 
   def create
-
     if @user.save
       flash[:notice]= "User added successfully"
       redirect_to @user
     else
-      render :index
-    end
-  end
-
-  def update
-    params[:user][:event_ids]=[]
-    @user = User.find(current_user)
-
-    if @user.update_attributes params[:user]
-      flash[:notice] = 'Settings have been saved'
-      redirect_to edit_user_url(@user)
-    else
       flash.now[:error] = @user.errors
       setup_form_values
       respond_to do |format|
-        format.html { render :action => :edit }
-      end
+      format.html { render :action => :edit }
     end
+  end
+
+  def show
+    @user = current_user
+    @event = Event.find(params[:id])
+    @user.event = current_user
+  end
 
   def destroy
     @user = User.find(params[:id])
@@ -48,7 +37,7 @@ class UsersController < ApplicationController
   def user_interest?(event)
     @user.event.include?
   end
-end 
+end
 
 
   private
@@ -56,17 +45,4 @@ end
   def set_user
     @user = USER.find(params[:id])
   end
-
-  # def user_params
-  #   params.require(:user).permit(
-  #   :username,
-  #   :first_name,
-  #   :last_name,
-  #   :email,
-  #   :zipcode,
-  #   :phone,
-  #   :avatar_url,
-  #   :about_me
-  #   )
-  # end
 end
