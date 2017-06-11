@@ -1,9 +1,8 @@
 <div class="row container">
   <div class="sign-up columns large-6 small-12">
 
-<div class="sign_up_form">
-
-<h2>Edit Profile <%= resource_name.to_s.humanize %></h2>
+<div class="edit_form">
+  <h2>Edit Profile <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -61,14 +60,17 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="field">
+
+  <div class="file_field" id="default-image">
     <%= f.label :avatar_url %>
     <%= f.file_field :avatar_url %>
     <% if @user.avatar_url.present? %>
       <%= image_tag @user.avatar_url %>
-      <%= f.label :remove_avatar_url do %>
-      <%= f.check_box :remove_avatar_url %>
-      <% end %>
+    <% else %>
+      <%= default_url %>
+    <%= f.label :remove_avatar_url do %>
+    <%= f.check_box :remove_avatar_url %>
+    <% end %>
     <% end %>
   </div>
 
@@ -83,6 +85,8 @@
 <% end %>
 </div>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+  <%= link_to "Back", :back %>
+  </div>
+</div>

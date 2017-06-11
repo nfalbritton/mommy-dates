@@ -1,6 +1,6 @@
 
-  <div class="profilepage">
-    <div id="leftcol">
+  <div class="row container" id="edit-page">
+    <div class="large-6 columns" >
 
         <div class="userinfo">
           <p>
@@ -38,9 +38,16 @@
             <textarea name="about-me" rows="10" cols="30"></textarea>
           </p>
         </div>
+      </div>
 
-        <p class="image"><%= image_tag @user.avatar_url %></p>
+        <div class="row">
+          <div class="large-6 columns" id="edit-image">
+          <br/>
+          <br/>
+          <p class="image"><%= image_tag @user.avatar_url %></p>
+        </div>
 
+        <% if false %>
         <div class="userevents">
           <h4>Events Created:</h4>
             <ul>
@@ -50,9 +57,10 @@
               <% end %>
             </ul>
           <% end %>
+          <% end %>
         </div>
       </div>
     </div>
 
-    <%= link_to 'Edit', edit_user_path(@user) %> |
-    <%= link_to 'Back', users_path %>
+        <%= link_to 'Edit', edit_user_path(@user) %> |
+        <%= link_to 'Back', users_path %>

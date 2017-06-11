@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
 
   def index
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def new
@@ -20,11 +23,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = current_user
-    @event = Event.find(params[:id])
-    @user.event = current_user
-  end
 
   def destroy
     @user = User.find(params[:id])
