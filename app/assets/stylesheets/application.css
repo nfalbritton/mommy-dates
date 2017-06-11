@@ -46,5 +46,28 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
+  }
 
+  .edit_form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #edit-page {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+
+  #edit-image {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .userinfo {
+    padding-right: 20px;
+  }
+
+  #search-form {
+    background-image: url('martini.png');
   }

@@ -1,5 +1,8 @@
 
 class User < ApplicationRecord
+  has_many :matches
+  has_many :events, through: :matches
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
