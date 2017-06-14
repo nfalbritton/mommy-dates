@@ -1,0 +1,16 @@
+<div class="row container">
+  <div class="columns large-6 small-12">
+
+    <% if @event.user_id %>
+      <h3> <%= @event.name %>Mommy Date</h3>
+      <p class="created-by">Created By:<%= @event.user.username %>
+    <% end %>
+
+    <br />
+
+    <div class="event-show-details">
+      <p><%= @event.location %></p>
+      <p><%= @event.description %></p>
+    </div>
+  </div>
+</div>

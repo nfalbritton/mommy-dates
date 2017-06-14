@@ -1,0 +1,10 @@
+  <div class="row container">
+    <div class="edit-event columns large-6 small-12">
+
+      <h3>Edit <%= @event.name %></h3>
+
+      <%= render 'form' %><br />
+
+      <%= link_to "Delete", @event, method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+  </div>
