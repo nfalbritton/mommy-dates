@@ -7,6 +7,7 @@ class EventsController < ApplicationController
   def show
     @user = current_user
     @event = Event.find(params[:id])
+    render :show
   end
 
   def new
@@ -19,9 +20,8 @@ class EventsController < ApplicationController
     @event.user = @user
 
       if @event.save
-        redirect to @events, flash[:notice] = "Event successfully created!"
+        redirect to @event, flash[:notice] = "Date successfully created!"
       else
-        redirect_to @events
         render :new
       end
     end

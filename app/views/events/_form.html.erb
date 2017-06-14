@@ -11,7 +11,7 @@
 
   <div class="field">
     <%= f.label :zipcode %><br/>
-    <%= f.text_field :zipcode %>
+    <%= f.text_area :zipcode %>
   </div>
 
   <div class="field">
@@ -19,8 +19,17 @@
     <%= f.text_area :description %>
   </div>
 
+
   <div class="form-group">
-    <%= f.collection_radio_buttons : %>
+    <%= f.hidden_field_tag :night_out, '' %>
+    <%= f.check_box_tag :night_out, checked = true %>Night Out</br></br>
+    <%= f.hidden_field_tag :outdoor_activity, '' %>
+    <%= f.check_box_tag :outdoor_activity, checked = true %>Outdoor Fun</br></br>
+    <%= f.hidden_field_tag :workout_buddy, '' %>
+    <%= f.check_box_tag :workout_buddy, checked = true %>Get Your Sweat On</br></br>
+    <%= f.hidden_field_tag :play_date, '' %>
+    <%= f.check_box_tag :play_date, checked = true %>Play Date</br></br>
+  </div>
 
   <div class="actions">
     <%= f.submit(value="Submit") %>
