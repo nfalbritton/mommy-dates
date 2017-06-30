@@ -7,5 +7,10 @@
     <div class="breaks"</div>
       <h2> MOMMY DATES </h2>
       <h3> "...Because the dating never stops" </h3>
+      <div>
+        <% if !@message.blank? %>
+       <%= @message %>
+       <% end %>
+      </div>
   </div>
   </body>
